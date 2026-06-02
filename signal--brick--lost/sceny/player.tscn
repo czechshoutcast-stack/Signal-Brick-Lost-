@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ctt84obhkg6fy"]
+
+[ext_resource type="Script" uid="uid://7t5g7qt1xyi0" path="res://scripts/movement.gd" id="1_6b8q1"]
+[ext_resource type="Texture2D" uid="uid://ctaunb4uwpcsy" path="res://placeholders/Plyer_holder.png" id="2_ovlec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g34tb"]
+
+[node name="Player" type="Node2D" unique_id=947350675]
+
+[node name="player" type="Node" parent="." unique_id=738016271]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="player" unique_id=1798602847]
+position = Vector2(582, 472)
+script = ExtResource("1_6b8q1")
+
+[node name="Sprite2D" type="Sprite2D" parent="player/CharacterBody2D" unique_id=2030962246]
+texture = ExtResource("2_ovlec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/CharacterBody2D" unique_id=1245091894]
+shape = SubResource("RectangleShape2D_g34tb")
