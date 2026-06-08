@@ -1,1 +1,2 @@
-Zatím funkční pohyb střelba a spawn enemy nejsou kolize v.0.0.0.1a
+v: 0.0.0.2 
+Zatím funkční pohyb střelba meteority se rozdělí dodělat kolize s ostatními asteroidy hráčem a další věci se musí udělat.
