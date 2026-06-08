@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var speed = 200.0
 
+var bullet_scene = preload("res://sceny/bullet.tscn")
+
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -22,9 +24,6 @@ func _physics_process(delta):
 		shoot()
 
 func shoot():
-	var bullet = ColorRect.new()
-	bullet.color = Color.WHITE
-	bullet.size = Vector2(4, 4)
+	var bullet = bullet_scene.instantiate()
 	bullet.global_position = global_position + Vector2(0, -10)
-	bullet.set_script(load("res://scripts/bullet.gd"))
 	get_parent().add_child(bullet)

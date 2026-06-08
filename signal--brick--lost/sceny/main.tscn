@@ -1,26 +1,17 @@
 [gd_scene format=3 uid="uid://xmfn6s2ueuvx"]
 
+[ext_resource type="Script" uid="uid://dft4u2xaihc7a" path="res://scripts/Asteroid_spawner.gd" id="1_8gesx"]
 [ext_resource type="PackedScene" uid="uid://ctt84obhkg6fy" path="res://sceny/player.tscn" id="1_b4mbv"]
 [ext_resource type="PackedScene" uid="uid://8mjllx2bc0hk" path="res://sceny/asteroid.tscn" id="2_mh27j"]
 
 [node name="Node2D" type="Node2D" unique_id=1973364824]
 
-[node name="enemySpawner" type="Node" parent="." unique_id=465364048]
+[node name="AsteroidSpawner" type="Node2D" parent="." unique_id=237987079]
+script = ExtResource("1_8gesx")
+asteroid_scene = ExtResource("2_mh27j")
 
 [node name="ui" type="Node" parent="." unique_id=558766164]
 
 [node name="pozadí" type="Node" parent="." unique_id=82512948]
 
 [node name="Player" parent="." unique_id=947350675 instance=ExtResource("1_b4mbv")]
-
-[node name="Asteroid" parent="." unique_id=281772069 instance=ExtResource("2_mh27j")]
-position = Vector2(25, 4)
-
-[node name="Asteroid2" parent="." unique_id=1140704902 instance=ExtResource("2_mh27j")]
-position = Vector2(643, 4)
-
-[node name="Asteroid3" parent="." unique_id=769896284 instance=ExtResource("2_mh27j")]
-position = Vector2(296, 4)
-
-[node name="Asteroid4" parent="." unique_id=1290394909 instance=ExtResource("2_mh27j")]
-position = Vector2(396, 2)

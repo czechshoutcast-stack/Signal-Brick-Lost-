@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://1xxgpt0lv7pa" path="res://placeholders/Enemy_holder.png" id="1_kbnod"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ek1uo"]
+size = Vector2(20, 23.923077)
 
-[node name="Asteroid" type="Node2D" unique_id=281772069]
+[node name="Asteroid" type="Area2D" unique_id=133832144]
 script = ExtResource("1_ek1uo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=423775653]
@@ -13,6 +14,7 @@ position = Vector2(178, -1.5)
 scale = Vector2(1, 0.8125)
 texture = ExtResource("1_kbnod")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=650620617]
-position = Vector2(559, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=650620617]
+position = Vector2(177, -2.3841858e-07)
+scale = Vector2(1, 0.8125)
 shape = SubResource("RectangleShape2D_ek1uo")

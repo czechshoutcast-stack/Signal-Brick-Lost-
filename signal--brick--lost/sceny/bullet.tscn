@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://blgn02rlmoqha" path="res://placeholders/bullet_holder.png" id="1_n8whv"]
 [ext_resource type="Script" uid="uid://cc0h6ixksf285" path="res://scripts/bullet.gd" id="1_wcijj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcijj"]
+
 [node name="Bullet" type="Area2D" unique_id=481244299]
 script = ExtResource("1_wcijj")
 
@@ -10,3 +12,6 @@ script = ExtResource("1_wcijj")
 texture = ExtResource("1_n8whv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=614568057]
+shape = SubResource("RectangleShape2D_wcijj")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
