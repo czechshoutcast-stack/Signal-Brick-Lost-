@@ -18,6 +18,8 @@ func _process(delta):
 		queue_free()
 
 func hit():
+	get_tree().current_scene.add_score(10)
+	
 	if size < 3:
 		for i in 2:
 			var new_ast = load("res://sceny/asteroid.tscn").instantiate()
@@ -36,3 +38,8 @@ func hit():
 			get_parent().call_deferred("add_child", new_ast)
 		
 	call_deferred("queue_free")
+
+func _on_area_entered(area):
+	if area.has_method("hit"):
+		area.hit()
+	print("COLLIDE WITH:", area.name)

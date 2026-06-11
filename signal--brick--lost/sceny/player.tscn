@@ -5,16 +5,20 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g34tb"]
 
-[node name="Player" type="Node2D" unique_id=947350675]
-
-[node name="player" type="Node" parent="." unique_id=738016271]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="player" unique_id=1798602847]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1380070565]
 position = Vector2(582, 472)
+collision_layer = 2
 script = ExtResource("1_6b8q1")
 
-[node name="Sprite2D" type="Sprite2D" parent="player/CharacterBody2D" unique_id=2030962246]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1370710999]
 texture = ExtResource("2_ovlec")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/CharacterBody2D" unique_id=1245091894]
+[node name="Hitbox" type="Area2D" parent="." unique_id=324151770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=514126483]
 shape = SubResource("RectangleShape2D_g34tb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2105027779]
+shape = SubResource("RectangleShape2D_g34tb")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

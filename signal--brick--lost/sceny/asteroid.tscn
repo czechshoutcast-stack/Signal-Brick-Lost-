@@ -18,3 +18,7 @@ texture = ExtResource("1_kbnod")
 position = Vector2(177, -2.3841858e-07)
 scale = Vector2(1, 0.8125)
 shape = SubResource("RectangleShape2D_ek1uo")
+
+[node name="Timer" type="Timer" parent="." unique_id=700992465]
+wait_time = 0.1
+one_shot = true
