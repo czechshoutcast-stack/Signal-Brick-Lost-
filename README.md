@@ -1,5 +1,9 @@
 Signal Brick Lost
 
+Note: This repository contains only the source scripts for Signal Brick Lost.
+The complete playable version is available on itch.io as a web browser build.
+https://gryfinswift.itch.io/signalbricklost
+
 Signal Brick Lost is a small arcade score-attack game developed in Godot 4.
 
 You control a small spacecraft trying to survive while debris from a collapsing space station moves through the play area. Destroy the incoming debris, survive as long as possible, and beat your high score.
